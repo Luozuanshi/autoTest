@@ -1,8 +1,6 @@
 package com.domoyun.testng;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 /**
  * @author shkstart
@@ -29,5 +27,14 @@ public class BasicAnnotation {
     @AfterMethod
     public static void AfterMethod(){
         System.out.println("AfterMethod是在测试方法运行之后运行的");
+    }
+    @BeforeClass
+    public static void BeforeClass(){
+
+        System.out.println("BeforeClass这是在类运行之前运行的方法");
+    }
+    @AfterClass
+    public static void afterClass(){
+        System.out.println("AfterClass这是在类运行之后运行的方法");
     }
 }
