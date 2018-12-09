@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Suite">
+    <test name="login">
+        <classes>
+            <class name="com.domoyun.testng.Suite.SuiteConfig"/>
+            <class name="com.domoyun.testng.Suite.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="pay">
+        <classes>
+            <class name="com.domoyun.testng.Suite.SuiteConfig"/>
+            <class name="com.domoyun.testng.Suite.PayTest"/>
+        </classes>
+    </test>
+</suite>
