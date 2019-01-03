@@ -1,0 +1,11 @@
+[
+  {
+    "description":"访问第一个mock接口",
+    "request":{
+      "uri":"/demo"
+    },
+    "response":{
+      "text":"mock接口访问成功"
+    }
+  }
+]
