@@ -1,0 +1,28 @@
+[
+  {
+    "description": "这是一个不带参数的get请求",
+    "request": {
+      "uri": "/getmethod",
+      "method": "get"
+    },
+    "response": {
+      "text": "不带参数的get请求，访问成功"
+    }
+  },
+  {
+    "description":"这是一个带参数的get请求",
+    "request": {
+      "uri": "/getparameter",
+      "method": "get",
+      "queries": {
+        "name": "pangluo",
+        "age": "23"
+      }
+    },
+      "response":{
+        "text":"带参数的get请求访问成功"
+      }
+    }
+
+
+  ]
