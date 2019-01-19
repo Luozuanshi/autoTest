@@ -1,0 +1,15 @@
+[
+  {
+    "description":"这是一个需要携带cookies才能访问成功的请求",
+    "request":{
+      "uri":"/getwithcookie",
+      "method":"get",
+      "cookies":{
+        "login":"true"
+      }
+    },
+    "response":{
+      "text":"访问成功!"
+    }
+  }
+]
