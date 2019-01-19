@@ -8,5 +8,20 @@
     "response":{
       "text":"成功访问mock 的post请求"
     }
+  },
+  {
+    "description":"模拟一个带参数的POST请求",
+    "request":{
+      "uri":"/postparame",
+      "method":"post",
+      "forms":{
+  "name":"pangluo",
+  "age":"18"
+}
+
+    },
+    "response":{
+      "text":"pangluo 18岁"
+    }
   }
 ]
