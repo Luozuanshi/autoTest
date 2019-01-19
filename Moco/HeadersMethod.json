@@ -1,0 +1,23 @@
+[
+  {
+    "description":"带header的请求",
+    "request":{
+      "uri":"/postwithheaders",
+      "method":"post",
+      "headers":{
+        "content-type":"application/json;charset=utf-8"
+      },
+      "json":{
+        "name":"pangluo",
+        "age":"18"
+      }
+    },
+    "response":{
+      "status":"200",
+      "json":{
+        "status":"2001",
+        "response":"访问成功"
+      }
+  }
+  }
+]

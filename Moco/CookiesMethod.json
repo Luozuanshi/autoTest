@@ -1,15 +1,36 @@
 [
   {
-    "description":"这是一个需要携带cookies才能访问成功的请求",
+    "description":"这是一个需要携带cookies才能访问成功的Get请求",
     "request":{
       "uri":"/getwithcookie",
       "method":"get",
       "cookies":{
-        "login":"true"
+        "authentication":"true"
       }
     },
     "response":{
       "text":"访问成功!"
+    }
+  },
+  {
+    "description":"这是一个需要携带cookies才能访问成功的Post请求",
+    "request":{
+      "uri":"/postwithcookie",
+      "method":"post",
+      "json":{
+        "name":"pangluo",
+        "age":"18"
+      },
+      "cookies":{
+        "authentication":"true"
+      }
+    },
+    "response":{
+      "status":"200",
+      "json":{
+        "succes":"true",
+        "response":"OK"
+      }
     }
   }
 ]
