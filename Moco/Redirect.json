@@ -1,0 +1,25 @@
+[
+  {
+    "description":"重定向到domoyun.com",
+    "request":{
+      "uri":"/redirect"
+    },
+    "redirectTo": "https://domoyun.com"
+  },
+  {
+    "description":"重定向到本地服务",
+    "request":{
+      "uri":"/localRedirect"
+    },
+    "redirectTo": "/new"
+  },
+  {
+    "description":"本地服务",
+    "request":{
+      "uri":"/new"
+    },
+    "response":{
+      "text":"重定向成功啦~"
+    }
+  }
+]
