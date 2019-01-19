@@ -1,0 +1,12 @@
+[
+  {
+    "description":"模拟一个POST请求",
+    "request":{
+      "uri":"/getpost",
+      "method":"post"
+    },
+    "response":{
+      "text":"成功访问mock 的post请求"
+    }
+  }
+]
