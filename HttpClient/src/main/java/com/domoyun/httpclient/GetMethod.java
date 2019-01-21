@@ -9,6 +9,9 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+/**
+ * Get方法实现
+ */
 public class GetMethod {
     @Test
     public void test() throws IOException {
