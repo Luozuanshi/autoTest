@@ -20,13 +20,15 @@ import java.util.ResourceBundle;
  */
 public class GetCookies {
     ResourceBundle bundle;
+    CookieStore cookieStore;
     @BeforeSuite
     public void beforesuite(){
         bundle= ResourceBundle.getBundle("uri");
+
     }
 
     @Test
-    public void getcookies() throws IOException {
+    public void getCookies() throws IOException {
        String uri = bundle.getString("getcookies");
         //GET请求
         HttpGet get =new HttpGet(uri);
@@ -34,10 +36,21 @@ public class GetCookies {
         HttpResponse response = client.execute(get);
         System.out.println( EntityUtils.toString(response.getEntity(),"utf-8"));
         //获取cookie
-        CookieStore cookie =((DefaultHttpClient) client).getCookieStore();
-        List<Cookie> cookieList =cookie.getCookies();
+        cookieStore =((DefaultHttpClient) client).getCookieStore();
+        List<Cookie> cookieList =cookieStore.getCookies();
         for (Cookie cookie1:cookieList) {
             System.out.println(cookie1.getName() +"        "  +cookie1.getValue() );
     }
+    }
+    @Test(dependsOnMethods = "getCookies")
+    public void carryCookieAccess() throws IOException {
+        String uri = bundle.getString("carryCookieAccess");
+        HttpGet get = new HttpGet(uri);
+        HttpClient client =new DefaultHttpClient();
+
+        ((DefaultHttpClient) client).setCookieStore(cookieStore);
+        HttpResponse response = client.execute(get);
+        System.out.println(response.getStatusLine().getStatusCode());
+        System.out.println(EntityUtils.toString(response.getEntity()));
     }
 }
