@@ -12,11 +12,14 @@
   {
     "description":"这是一个带参数的get请求",
     "request": {
-      "uri": "/getparameter",
-      "method": "get",
-      "queries": {
-        "name": "pangluo",
-        "age": "23"
+  "uri": "/getparameter",
+  "method": "get",
+  "headers":{
+    "content-type":"charset=gbk"
+  },
+  "queries": {
+    "name": "pangluo",
+    "age": "23"
       }
     },
       "response":{

@@ -1,5 +1,34 @@
 [
   {
+    "description":"这是我们的第一个mock例子",
+    "request":{
+      "uri":"/demo"
+    },
+    "response":{
+      "text":"第一个moco框架demo",
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      }
+    }
+  },
+  {
+    "description":"这是一个访问成功后，返回cookies的示例",
+    "request":{
+      "uri":"/getcookie",
+      "method":"get"
+    },
+    "response":{
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      },
+      "text":"登陆成功",
+      "cookies":{
+        "authentication":"true"
+
+      }
+    }
+  },
+  {
     "description":"这是一个需要携带cookies才能访问成功的Get请求",
     "request":{
       "uri":"/getwithcookie",
@@ -9,6 +38,8 @@
       }
     },
     "response":{
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"},
       "text":"访问成功!"
     }
   },
