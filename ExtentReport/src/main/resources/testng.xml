@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <suite name="extentreport">
     <test name="TestClass">
-        <classes>
-            <class name="com.domoyun.extentrepot.TestClass"/>
-            <methods>
-            <include name="test1"/>
-            <include name="test2"/>
-            <include name="test3"/>
-            <include name="logDemo"/>
-        </methods>
-        </classes>
-    </test>
+            <classes>
+                <class name="com.domoyun.extentrepot.TestClass"/>
+
+            </classes>
+        </test>
     <listeners>
         <!--<listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter" />-->
         <listener class-name="com.domoyun.extentrepot.ExtentTestNGIReporterListener"/>
